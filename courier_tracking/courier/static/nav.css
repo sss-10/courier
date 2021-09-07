@@ -1,0 +1,81 @@
+.nav{
+	width: 100%;
+	padding-top: 15px;
+	display: inline-flex;
+	background: white;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav div{
+	margin-left: 5px;
+}
+.nav div img{
+	margin-left: 15px;
+	margin-bottom: 30px;
+}
+.brand{
+	margin: 0;
+	padding: 0;
+}
+.brand h1{
+	font-size: 50px;
+	font-weight: bold;
+	background-image: linear-gradient(to right, #F32170, #FFEB07, #2196F3, #FF00EB);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+.menu ul{
+	display: flex;
+	list-style-type: none;
+	margin-top: 5px;
+}
+.menu ul li{
+	padding-left: 5px;
+	padding-top: 18px;
+	text-decoration: none;
+}
+.menu ul li:hover{
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 22px;
+}
+.menu ul li a{
+	padding-left: 13px;
+	padding-top: 18px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #444444;
+}
+.menu ul li a i{
+	font-size: 20px;
+	color: #444444;
+}
+.search{
+	padding-top: 15px;
+	padding-left: 30px;
+}
+.search i{
+	height: 23px;
+	float: center;
+	padding-right: 5px;
+	margin-top: 3px;
+}
+.search i:hover{
+	font-weight: bold;
+	background: gray;
+}
+.account{
+	background-image: linear-gradient(to right, #A9EBDA, #FFEB07);
+	padding: 5px;
+	height: 50px;
+	width: 50px;
+	align-items: center;
+	border: 1px solid green;
+	border-radius: 50%;
+	margin-right: 40px;
+}
+.account i{
+	font-size: 27px;
+	margin: 3px;
+	color: green;
+}
