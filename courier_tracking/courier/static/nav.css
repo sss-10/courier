@@ -31,7 +31,7 @@
 }
 .menu ul li{
 	padding-left: 5px;
-	padding-top: 18px;
+	padding-top: 10px;
 	text-decoration: none;
 }
 .menu ul li:hover{
@@ -50,6 +50,19 @@
 	font-size: 20px;
 	color: #444444;
 }
+.menu ul li ul{
+    position:absolute;
+    display:none;
+    border: 2px solid black;
+}
+.menu ul li:hover > ul{
+    padding-left:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+    margin-top:0px;
+    font-weight:normal;
+    display:block;
+}
 .search{
 	padding-top: 15px;
 	padding-left: 30px;
@@ -65,7 +78,7 @@
 	background: gray;
 }
 .account{
-	background-image: linear-gradient(to right, #A9EBDA, #FFEB07);
+	background-image: linear-gradient(to right, #E70278, #020408);
 	padding: 5px;
 	height: 50px;
 	width: 50px;
@@ -77,5 +90,5 @@
 .account i{
 	font-size: 27px;
 	margin: 3px;
-	color: green;
+	color: white;
 }

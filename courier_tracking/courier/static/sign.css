@@ -1,0 +1,141 @@
+.sign{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    background: black;
+    transition: 0.5s;
+}
+
+.signContainer{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+.signBlueBg{
+    position: absolute;
+    top: 40px;
+    width:100%;
+    height:420px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 5px 45px rgba(255,255,255,0.9);
+}
+
+
+.signBox{
+    margin:10%;
+    position:relative;
+    display:flex;
+    width:50%
+    height:100%
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.signBox h2{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.signBox button{
+    cursor:pointer;
+    padding:10px 20px;
+    background:#fff;
+    color: #333;
+    font-size:16px;
+    font-weight: 500;
+    border: none;
+}
+
+.signFormBox{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #ffffff;
+    z-index:1000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.3);
+    transition: 0.5s ease-in-out;
+    overflow:hidden;
+}
+.sign.active{
+    background: #E50278;
+}
+.signFormBox.active{
+    left:50%;
+}
+
+
+.signFormBox > .signForm{
+    position: absolute;
+    left:0;
+    width:100%;
+    transition:0.5s;
+    padding:50px;
+}
+.signFormBox > .signInForm{
+    transition-delay: 0.25s;
+
+}
+.signFormBox.active >.signInForm{
+    left: -100%;
+    transition-delay: 0s;
+}
+.signFormBox >.signUpForm{
+    left: 100%;
+    transition-delay: 0s;
+}
+.signFormBox.active >.signUpForm{
+    left: 0;
+    transition-delay: 0s;
+}
+.signFormBox > .signForm > form{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+.signFormBox > .signForm > form h3{
+    font-size:2.1em;
+    color:#333;
+    margin-bottom:20px;
+    font-weight:500;
+}
+.signFormBox > .signForm > form input{
+    width:100%;
+    margin-bottom:20px;
+    padding:10px;
+    outline:none;
+    font-size:1.2em;
+    border:1px solid #333;
+    border-radius:10px;
+
+}
+.signFormBox > .signForm > form input[ type="submit"]{
+    background: linear-gradient(45deg, black, #555555);
+    border: none;
+    color:#fff;
+    max-width:100px;
+    cursor:pointer;
+}
+
+.signFormBox.active > .signForm > form input[ type="submit"]{
+    background: linear-gradient(45deg, #A90744, #E50278);
+}
+
+.signFormBox > .signForm > form > .signForget{
+    color: #333;
+}

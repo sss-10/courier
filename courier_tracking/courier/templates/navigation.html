@@ -4,27 +4,38 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<title>Extronix</title>
+	<title>Courier</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link href="{% static 'nav.css' %}" rel="stylesheet">
+	<link href="{% static 'sign.css' %}" rel="stylesheet">
 </head>
 <body>
 <div class="nav">
 		<div>
-			<img src="{% static 'images//logo.png' %}" height="55px">
+			<img src="{% static 'images//logo.jfif' %}" height="80px">
 			<div class="brand d-inline-flex">
-				<h1 class="btn"><a href="CLASS 4SEP2021.html">Extronix</a></h1>
+				<h1 class="btn"><a href="CLASS 4SEP2021.html">Courier</a></h1>
 			</div>
 		</div>
 
 		<div class="menu">
 			<ul>
-				<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-				<li><a href="contact.html"><i class="fas fa-globe"></i>All</li>
+				<li><a href="{% url 'index'%}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
 				<li><a href=""><i class="fas fa-plane-arrival"></i>New Release</a></li>
 				<li><a href=""><i class="fab fa-gratipay"></i>Best Deals</a></li>
 				<li><a href=""><i class="fas fa-gift"></i>Today's offer</a></li>
+				<li>  <a href=""><i class="fas fa-globe "></i>All</a>
+					<ul>
+						<li><a href="">Track Order</a></li>
+						<li><a href="">Cancel Order</a></li>
+						<li><a href="">Return Order</a></li>
+						<li><a href="">Cancel Order</a></li>
+						<li><a href="">Contact us</a></li>
+						<li><a href="">Feedback</a></li>
+						<li><a href="">About us</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<div class="search">
@@ -37,7 +48,7 @@
 
 		</div>
 		<div class="account btn mx-3">
-			<a href=""><i class="fas fa-user-alt-slash"></i></a>
+			<a href="{% url 'sign' %}"><i class="fas fa-user-alt-slash"></i></a>
 		</div>
 	</div>
 {% block body %}
