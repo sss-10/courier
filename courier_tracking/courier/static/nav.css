@@ -53,6 +53,7 @@
 .menu ul li ul{
     position:absolute;
     display:none;
+    background:#D8E4F2;
     border: 2px solid black;
 }
 .menu ul li:hover > ul{
@@ -62,6 +63,14 @@
     margin-top:0px;
     font-weight:normal;
     display:block;
+}
+.menu ul li:hover > ul>li{
+    position:relative;
+    z-index:9;
+}
+.menu ul li:hover > ul>li:hover{
+    justify-content:center;
+    align-items:center;
 }
 .search{
 	padding-top: 15px;
@@ -78,7 +87,7 @@
 	background: gray;
 }
 .account{
-	background-image: linear-gradient(to right, #E70278, #020408);
+	background-image: linear-gradient(to right, #E70278,grey);
 	padding: 5px;
 	height: 50px;
 	width: 50px;
