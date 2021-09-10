@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		.gallary{
+			height: 500px;
+			width: 500px;
+			background: url("01.jpg");
+			background-size: cover;
+			animation-name: transit ;
+			animation-iteration-count: infinite;
+			animation-duration: 36s;
+		}
+		@keyframes transit{
+			0%{background: url("x01.jpg");background-size: cover;}
+			8%{background: url("x02.jpg");background-size: cover;}
+			16%{background: url("x03.jpg");background-size: cover;}
+			24%{background: url("x04.jpg");background-size: cover;}
+			32%{background: url("x05.jpg");background-size: cover;}
+			40%{background: url("x06.jpg");background-size: cover;}
+			48%{background: url("x07.jpg");background-size: cover;}
+			56%{background: url("x08.jpg");background-size: cover;}
+			64%{background: url("x09.jpg");background-size: cover;}
+			72%{background: url("x10.jpg");background-size: cover;}
+			80%{background: url("x11.jpg");background-size: cover;}
+			100%{background: url("x12.jpg");background-size: cover;}
+		}
+	</style>
+</head>
+<body>
+	<div class="gallary">
+
+	</div>
+</body>
+</html>

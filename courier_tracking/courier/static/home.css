@@ -1,0 +1,43 @@
+.gallary{
+    height: 500px;
+    width: 500px;
+    background: url(/static/images/01.jpg );
+    background-size: cover;
+    animation-name: transit ;
+    animation-iteration-count: infinite;
+    animation-duration: 36s;
+}
+@keyframes transit{
+    0%{background: url(/static/images/x01.jpg);background-size: cover;}
+    8%{background: url(/static/images/x02.jpg);background-size: cover;}
+    16%{background: url(/static/images/x03.jpg);background-size: cover;}
+    24%{background: url(/static/images/x04.jpg);background-size: cover;}
+    32%{background: url(/static/images/x05.jpg);background-size: cover;}
+    40%{background: url(/static/images/x06.jpg);background-size: cover;}
+    48%{background: url(/static/images/x07.jpg);background-size: cover;}
+    56%{background: url(/static/images/x08.jpg);background-size: cover;}
+    64%{background: url(/static/images/x09.jpg);background-size: cover;}
+    72%{background: url(/static/images/x10.jpg);background-size: cover;}
+    80%{background: url(/static/images/x11.jpg);background-size: cover;}
+    100%{background: url(/static/images/x12.jpg);background-size: cover;}
+}
+.social{
+    height: 8vh;
+    width: 100%;
+}
+.social > .links >ul {
+    box-sizing: border-box;
+    margin-right:120px;
+    padding-bottom: 9px;
+}
+.social > .links >ul > li{
+    display: inline-flex;
+    float: right;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.social > .links >ul > li > a:hover{
+    color: rgb(255, 147, 147);
+}
+

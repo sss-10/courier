@@ -1,0 +1,60 @@
+{% extends 'layout.html'%}
+{% load static %}
+{% block body %}
+    <title>Account</title>
+    <link rel="stylesheet" href="{% static 'sign.css'%}">
+    {% include 'navigation.html'%}
+    <div class="sign">
+        <div class="signContainer">
+            <div class="signBlueBg">
+                <div class="signBox signSignin">
+                    <h2>Already have an account ?</h2>
+                    <button class="signSigninbtn">Sign in</button>
+                </div>
+                <div class="signBox signSignup">
+                    <h2>Do not have an account ?</h2>
+                    <button class="signSignupbtn">Sign up</button>
+                </div>
+            </div>
+            <div class="signFormBox">
+                <div class=" signForm signInForm">
+                    <form method="POST" action="{%url 'sign'%}">
+                        {% csrf_token %}
+                        <h3>Sign-in</h3>
+                        <input type="text" placeholder="User-name is e-mail"  name="uname">
+                        <input type="password" placeholder="Password" name="passcode">
+                        <input type="submit" value="Login">
+                        <a href="#" class="signForget">Forget Password?</a>
+                    </form>
+                </div>
+                <div class="signForm signUpForm">
+                    <form method="POST" action="{% url 'signup'%}">
+                        {% csrf_token %}
+                        <h3>Sign-up</h3>
+                        <input type="text" placeholder="Full name" name="name">
+                        <input type="email" placeholder="Email" name="uname">
+                        <input type="number" placeholder="Contact number" name="phone">
+                        <input type="password" placeholder="Password" name="passcode">
+                        <input type="submit" value="Register">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            const signSigninbtn = document.querySelector('.signSigninbtn');
+            const signSignupbtn = document.querySelector('.signSignupbtn');
+            const signFormBox = document.querySelector('.signFormBox');
+            const sign = document.querySelector('.sign');
+
+            signSignupbtn.onclick = function(){
+                signFormBox.classList.add('active');
+                sign.classList.add('active');
+            }
+
+            signSigninbtn.onclick = function(){
+                signFormBox.classList.remove('active');
+                sign.classList.remove('active');
+            }
+        </script>
+    </div>
+{% endblock %}

@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('sign/', sign, name="sign"),
+    path('signup/', signup, name="signup"),
+    path('contact', contact, name='contact' ),
 ]

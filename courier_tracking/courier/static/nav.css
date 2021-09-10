@@ -51,10 +51,8 @@
 	color: #444444;
 }
 .menu ul li ul{
-    position:absolute;
+	display:table-column;
     display:none;
-    background:#D8E4F2;
-    border: 2px solid black;
 }
 .menu ul li:hover > ul{
     padding-left:10px;
@@ -63,14 +61,19 @@
     margin-top:0px;
     font-weight:normal;
     display:block;
+	position:absolute;
 }
 .menu ul li:hover > ul>li{
-    position:relative;
+    position: relative;
+	padding:2%;
+	margin: 2%;
+	width: 200px;
+	background: white;
     z-index:9;
 }
 .menu ul li:hover > ul>li:hover{
-    justify-content:center;
-    align-items:center;
+    background: rgb(86, 255, 190);
+	;
 }
 .search{
 	padding-top: 15px;
