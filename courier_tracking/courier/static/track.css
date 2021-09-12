@@ -1,0 +1,28 @@
+.containerc{
+    height: 30vh;
+    width: 100%;
+    background: linear-gradient(20deg, #444444, #777777, #888888);
+    box-sizing: border-box;
+    padding-left: 30%;
+    padding-top: 4%;
+    display: inline-block;
+}
+#in{
+    font-size: 30px;
+    width: 40%;
+    height: 50px;
+    color: rgb(245, 52, 187);
+    border: none;
+    border-radius: 8px;
+    display: inline-table;
+}
+#bttn{
+    color: rgb(236, 236, 236);
+    background-color: deepskyblue;
+    font-size: 30px;
+    width: fit-content;
+    border-radius: 10px;
+}
+#bttn:hover{
+    box-shadow: 0px 0px 3px 5px cyan;
+}

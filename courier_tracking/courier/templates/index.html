@@ -4,25 +4,31 @@
 <link rel="stylesheet" href="{%static 'home.css'%}">
 
 
-{% include 'navigation.html'%}
+{% include 'navigation.html' %}
 
 <div class="social">
     <div class="links">
         <ul>
-            <li><a href="#"><i class="fab fa-facebook-square text-primary"></i></a></li>
-            <li><a href="#"><i class="fab fa-google-plus-square text-danger"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter text-primary"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram text-danger"></i></a></li>
+            <li><a href="https://www.facebook.com/shashankshekhar.shukla.796"><i class="fab fa-facebook-square text-primary"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/sashank-shekhar-shukla-28040a1b9/"><i class="fab fa-google-plus-square text-danger"></i></a></li>
+            <li><a href="https://twitter.com/S_ox10"><i class="fab fa-twitter " style="color: rgb(9, 198, 255);"></i></a></li>
+            <li><a href="https://github.com/sss-10"><i class="fab fa-github" style="color:black;"></i></a></li>
+            <li><a href="https://www.instagram.com/sss.oo7.in/"><i class="fab fa-instagram" style="color: rgb(255, 55, 5);"></i></a></li>
         </ul>
     </div>
 </div>
 <div>
-    {% if  user %}
-    <h1 style="display: block; text-align: right; margin-top: 20px; padding-right:60px;height: 60px; width: 100%; background-color: darkgreen; color: gainsboro;">User : {{user}}</h1>
+    {% if user %}
+    <h1 style="color: gold; text-align: right; margin-top: 20px; padding-right:110px;height: 60px; width: 100%; background:linear-gradient(45deg, rgb(3, 20, 255), rgb(97, 6, 6)); color: gainsboro;">User : {{user}}</h1>
     {% endif %}
+</div>
+<div style="margin: 20px; width: 100%;">
+
 </div>
 <div class="gallary">
 
 </div>
+<div style="margin: 20px; width: 100%;">
 
+</div>
 {% endblock %}

@@ -67,13 +67,12 @@
     position: relative;
 	padding:2%;
 	margin: 2%;
-	width: 200px;
+	width: 180px;
 	background: white;
     z-index:9;
 }
 .menu ul li:hover > ul>li:hover{
-    background: rgb(86, 255, 190);
-	;
+    background: rgb(255, 95, 220);
 }
 .search{
 	padding-top: 15px;

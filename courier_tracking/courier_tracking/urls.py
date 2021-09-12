@@ -22,4 +22,8 @@ urlpatterns = [
     path('sign/', sign, name="sign"),
     path('signup/', signup, name="signup"),
     path('contact', contact, name='contact' ),
+    path('track/',track, name='track' ),
+    path('viewuser/', viewuser, name='viewuser'),
+    path('deleteuser/<str:demail>', deleteuser, name='deleteuser'),
+    path('logout/',logout, name='logout'),
 ]

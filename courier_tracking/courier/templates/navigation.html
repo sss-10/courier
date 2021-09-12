@@ -15,15 +15,23 @@
 		<div class="menu">
 			<ul>
 				<li><a href="{% url 'index'%}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-				<li><a href=""><i class="fas fa-truck"></i>Track Order</a></li>
+				{% if user %}
+				<li><a href="{% url 'track' %}"><i class="fas fa-truck"></i>Track Order</a></li>
 				<li><a href=""><i class="fas fa-cart-plus"></i>Book Order</a></li>
+				{% endif %}
 				<li><a href="{% url 'contact'%}"><i class="fas fa-mobile-alt"></i></i>Contact Us</a></li>
 				<li>  <a href=""><i class="fas fa-globe "></i>All</a>
 					<ul>
-						<li><a href="">Track Order</a></li>
+						{% if user %}
+						<li><a href="{% url 'track' %}">Track Order</a></li>
 						<li><a href="">Cancel Order</a></li>
 						<li><a href="">Return Order</a></li>
 						<li><a href="">Cancel Order</a></li>
+						<li><a href="{% url 'logout' %}">Log Out</a></li>
+						{% endif %}
+						{% if Admin %}
+						<li><a href="{% url 'viewuser'%}">View Users</a></li>
+						{% endif %}
 						<li><a href="{% url 'contact'%}">Contact us</a></li>
 						<li><a href="">Feedback</a></li>
 						<li><a href="">About us</a></li>
@@ -33,14 +41,15 @@
 		</div>
 		<div class="search">
 			<div class="input-group mb-3">
-			  <input type="text" class="form-control" placeholder="search product" aria-label="Recipient's username" aria-describedby="basic-addon2">
+			  <input type="text" class="form-control" placeholder="search product" aria-label="shipment" aria-describedby="basic-addon2">
 			  <div class="input-group-append">
 			    <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
 			  </div>
 			</div>
-
 		</div>
 		<div class="account btn mx-3">
-			<a href="{% url 'sign' %}"><i class="fas fa-user-alt-slash"></i></a>
+
+			<a href="{% url 'sign' %}">
+				{% if user %}<i class="fas fa-user-alt"></i>{% else %}<i class="fas fa-user-alt-slash"></i>{% endif %}</a>
 		</div>
 	</div>
