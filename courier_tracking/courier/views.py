@@ -36,8 +36,9 @@ def signup(request):
         email = request.POST['uname']
         phone = request.POST['phone']
         passcode = request.POST['passcode']
+        img = request.FILES["photo"]
         try:
-            Signup.objects.create(user=name, mobile=phone, email=email, password=passcode)
+            Signup.objects.create(user=name, mobile=phone, email=email, password=passcode, image=img)
             Login.objects.create(uname=email, password=passcode)
             error=False
         except:

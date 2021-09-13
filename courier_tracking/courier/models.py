@@ -8,6 +8,7 @@ class Signup(models.Model):
     user = models.CharField (max_length=200)
     mobile = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=300,primary_key=True, null=False)
+    image = models.FileField(null=True)
     password = models.CharField(max_length=40)
 
     def __str__(self):

@@ -28,13 +28,14 @@
                     </form>
                 </div>
                 <div class="signForm signUpForm">
-                    <form method="POST" action="{% url 'signup'%}">
+                    <form method="POST" action="{% url 'signup'%}" enctype="multipart/form-data">
                         {% csrf_token %}
                         <h3>Sign-up</h3>
                         <input type="text" placeholder="Full name" name="name">
                         <input type="email" placeholder="Email" name="uname">
                         <input type="number" placeholder="Contact number" name="phone">
                         <input type="password" placeholder="Password" name="passcode">
+                        <input type="file" name="photo">
                         <input type="submit" value="Register">
                     </form>
                 </div>
