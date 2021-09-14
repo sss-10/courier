@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<link href="{% static 'viewuser.css'%}" rel="stylesheet">
+{% include 'navigation.html'%}
+    <table class="table table-hover">
+        <tr class="pinkbg">
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Order</th>
+            <th>Date</th>
+            <th>ID</th>
+            <th>ID-no</th>
+            <th>Weight</th>
+            <th>Address</th>
+            <th>Status</th>
+        </tr>
+        {% for i in data %}
+            <tr>
+                <td style="vertical-align: middle;">{{forloop.counter}}</td>
+                <td style="vertical-align: middle;">{{i.rname}}</td>
+                <td style="vertical-align: middle;">{{i.rmail}}</td>
+                <td style="vertical-align: middle;">{{i.rphone}}</td>
+                <td style="vertical-align: middle;">{{i.rorder}} </td>
+                <td style="vertical-align: middle;">{{i.rdate}} </td>
+                <td style="vertical-align: middle;">{{i.rsid}} </td>
+                <td style="vertical-align: middle;">{{i.rsidno}} </td>
+                <td style="vertical-align: middle;">{{i.rweight}} </td>
+                <td style="vertical-align: middle;">{{i.raddress}} </td>
+                <td style="vertical-align: middle;">{{i.rstatus}} </td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="11" style="background-color: hotpink; font-size: 20px; font-weight: bold;" align="center" >THE END</td>
+        </tr>
+    </table>
+{% endblock %}

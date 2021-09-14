@@ -1,0 +1,102 @@
+{% extends 'layout.html'%}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'bookorder.css'%}">
+{% include 'navigation.html' %}
+<div style="height: 10px;"></div>
+<div class="orderForm">
+    <form method="POST" action="{% url 'bookorder'%}">
+        {% csrf_token%}
+            <h2>Create Parcel Request</h2>
+            <table>
+                <tr>
+                    <td id="fifty"> 
+                        <div class="inputBox"style="display: inline-block;">
+                            <input type="text" name="pname" required="required">
+                            <span>Full Name</span>
+                        </div>
+                    </td>
+                    <td id="fifty">
+                        <div class="inputBox" style="display: inline-block;">
+                            <input type="text" name="pemail" required="required">
+                            <span>Email</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="fifty"> 
+                        <div class="inputBox"style="display: inline-block;">
+                            <input type="text" name="pcontact" required="required">
+                            <span>Contact </span>
+                        </div>
+                    </td>
+                    <td id="fifty">
+                        <div class="inputBox" style="display: inline-block;">
+                            <input type="text" list="ordertypes" name="porder" required="required">
+                            <span>Parcel Type</span>
+                            <datalist id="ordertypes">
+                                <option value="Big Box"></option>
+                                <option value="Small Box"></option>
+                                <option value="Document"></option>
+                            </datalist>
+                        </div>
+                    </td>
+                </tr>  
+                <tr>
+                    <td id="fifty"> 
+                        <div class="inputBox"style="display: inline-block;">
+                            <input type="text" name="pweight" required="required">
+                            <span>Parcel's weight</span>
+                        </div>
+                    </td>
+                    <td id="fifty">
+                        <div class="inputBox" style="display: inline-block;">
+                            <input type="text" name="pdate" required="required">
+                            <span>Order's Date</span>
+                        </div>
+                    </td>
+                </tr>  
+                <tr>
+                    <td id="fifty"> 
+                        <div class="inputBox"style="display: inline-block;">
+                            <input type="text" list="idlist" name="psid" required="required">
+                            <span>Type of ID Proof</span>
+                            <datalist id="idlist">
+                                <option value="AADHAR"></option>
+                                <option value="PAN CARD"></option>
+                                <option value="VOTER ID"></option>
+                                <option value="OTHER"></option>
+                            </datalist>
+                        </div>
+                    </td>
+                    <td id="fifty">
+                        <div class="inputBox" style="display: inline-block;">
+                            <input type="text" name="psidno" required="required">
+                            <span>ID Proof number</span>
+                        </div>
+                    </td>
+                </tr>  
+                <tr>
+                    <td colspan="2">
+                        <div class="inputBox" style="display: inline-block;">
+                            <input type="text" name="paddress" required="required"> 
+                            <span>Receiver's Address</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="inputBox" style="display: inline-block;">
+                            <input type="text" name="pstatus" required="required"> 
+                            <span>Status</span>
+                        </div>
+                    </td>
+                </tr>          
+            </table>
+            <div class="inputBox">
+                <input type="Submit" value="Make Request">
+            </div>
+    </form>
+</div>
+
+{% endblock %}

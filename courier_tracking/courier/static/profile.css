@@ -1,0 +1,53 @@
+
+.card{
+    background: linear-gradient(45deg, #696969, #bebebe, #696969);
+    height: 1200px;
+    width: 600px;
+    margin-left: 30%;
+    margin-top:50px;
+    margin-bottom: 60px;
+    padding: 3%;
+    box-shadow: 0px 0px 10px 20px rgb(53, 53, 53);
+}
+
+.profile>img{
+    border-radius:49%;
+    height: 350px;
+    border: none;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px 10px darkslategray;
+}
+
+.profile>h2{
+    margin-top: 20px;
+    font-size: 60px;
+    font-style: algerian;
+    font-weight: 700;
+    margin-left: 10%;
+}
+.profile>h3{
+    font-size: 37px;
+    margin-left: 12%;
+}
+
+.links{
+    margin-top: 80px;
+}
+.links>ul>li{
+    list-style: none;
+}
+
+.links>ul>li>a{
+    padding: 5px;
+    margin: 5px;
+    color: rgb(251, 251, 251);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.links>ul>li:hover{
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 13px;
+    font-size: 33px;
+}

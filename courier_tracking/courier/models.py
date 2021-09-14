@@ -20,3 +20,18 @@ class Login(models.Model):
 
     def __str__(self) -> str:
         return self.uname
+
+class Orders(models.Model):
+    rname = models.CharField(max_length=200, null=True)
+    rmail = models.CharField(max_length=200, null=True)
+    rphone = models.CharField(max_length=200, null=True)
+    rorder = models.CharField(max_length=200, null=True)
+    rdate = models.CharField(max_length=200, null=True)
+    rsid = models.CharField(max_length=200, null=True)
+    rsidno = models.CharField(max_length=200, null=True)
+    rweight = models.CharField(max_length=200, null=True)
+    raddress = models.CharField(max_length=200, null=True)
+    rstatus = models.CharField(max_length=200, null=True)
+
+    def __str__(self) -> str:
+        return self.rname

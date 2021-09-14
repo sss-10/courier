@@ -15,7 +15,7 @@
         </tr>
         {% for i in data %}
             <tr>
-                <td style="vertical-align: middle;">{{i.user.0}}</td>
+                <td style="vertical-align: middle;">{{forloop.counter}}</td>
                 <td style="vertical-align: middle;">{{i.user}}</td>
                 <td style="vertical-align: middle;">{{i.email}}</td>
                 <td style="vertical-align: middle;">{{i.mobile}}</td>

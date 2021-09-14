@@ -24,11 +24,14 @@ urlpatterns = [
     path('', index, name="index"),
     path('sign/', sign, name="sign"),
     path('signup/', signup, name="signup"),
-    path('contact', contact, name='contact' ),
+    path('contact/', contact, name='contact' ),
     path('track/',track, name='track' ),
     path('viewuser/', viewuser, name='viewuser'),
+    path('vieworder/', vieworder, name='vieworder'),
     path('deleteuser/<str:demail>', deleteuser, name='deleteuser'),
     path('logout/',logout, name='logout'),
+    path('bookorder/', bookorder, name='bookorder'),
+    path('profile/', profile, name='profile'),
 ]
 
 
